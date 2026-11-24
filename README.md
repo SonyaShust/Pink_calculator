@@ -23,5 +23,5 @@
 # # Установка и запуск на linux:
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/SonyaShust/pink-calculator.git
+   git clone https://github.com/SonyaShust/pink_calculator.git
    cd pink-calculator
