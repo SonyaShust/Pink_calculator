@@ -19,13 +19,13 @@ class Calculator:
         self.root.configure(bg=BG_COLOR)
         self.root.resizable(False, False)
 
-        # Переменная для хранения текста в поле ввода
+        #Переменная для хранения текста в поле ввода
         self.input_text = tk.StringVar()
 
-        # --- Регистрация функции валидации ---
+        #Регистрация функции валидации
         validate_cmd = self.root.register(self.validate_input)
 
-        # --- Поле ввода (Дисплей) ---
+        #Поле ввода
         self.display = tk.Entry(
             root,
             textvariable=self.input_text,
@@ -39,7 +39,7 @@ class Calculator:
         )
         self.display.pack(fill="both", padx=15, pady=15, ipady=10)
 
-        # --- Панель с кнопками ---
+        #Панель с кнопками
         buttons_frame = tk.Frame(root, bg=BG_COLOR)
         buttons_frame.pack(fill="both", expand=True, padx=10, pady=10)
 
@@ -70,7 +70,7 @@ class Calculator:
         # Обработка нажатия Enter для вычисления
         self.root.bind("<Return>", lambda event: self.calculate())
 
-    # --- Валидация ввода ---
+    #Валидация ввода
     def validate_input(self, action, value_if_allowed, value_if_denied):
         """
         action: '1' — вставка, '0' — удаление
@@ -86,7 +86,7 @@ class Calculator:
 
         return True
 
-    # --- Функции логики ---
+
     def click(self, char):
         """Добавляет символ в поле ввода."""
         current = self.input_text.get()
